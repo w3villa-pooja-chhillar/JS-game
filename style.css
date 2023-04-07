@@ -1,0 +1,134 @@
+body{
+    background-color:00FFFF;
+}
+.game-outer{
+    background-color:red;
+    height:  680px;
+    width:88%;
+    margin:auto;
+    border:2px solid  black;
+    margin-top: 70px;
+    /* margin:60px; */
+    /* position:relative; */
+    border-radius:10px;
+}
+#game-container{
+    height: 60vh;
+    width:70%;
+    border:2px solid  black;
+    margin:100px auto;
+    position:relative;
+    background-color:black;
+    border-radius:10px;
+    padding:0px;
+    border: 2px solid white;
+}
+#dots-a{
+    height:80px;
+    width:80px;
+    border: 5px solid grey;
+    position:absolute;
+    border-radius:50%;
+    background-color:white;
+    left:100px;
+    top:50px;
+}
+#dots-b{
+    position:absolute;
+    height:40px;
+    width:40px;
+    border-radius:50%;
+    background-color:white;
+    border: 5px solid grey;
+    left:340px;
+    top:30px;
+}
+#dots-c{
+    position:absolute;
+    height:120px;
+    width:120px;
+    border-radius:50%;
+    background-color:white;
+    border:5px solid grey;
+    left:680px;
+    top:50px;
+}
+#star{
+    position:absolute;
+    left:500px;
+    top:60px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    border:5px solid grey;
+    background-color:white;
+}
+/* #star img{
+    height:100%;
+    width:100%
+} */
+/* score */
+#score{
+    position:absolute;
+    top:0;
+    color:white;
+    right:10vw;
+    font-size: 30px;
+    font-weight:200;
+}
+#character img{
+    height:100px;
+}
+#obstacle{
+    height:100px;
+    width:100px;
+    background-image: url('https://github.com/w3villa-talib/pikachu-run/blob/master/img/bomb.png?raw=true');
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom:0vh;
+    left:80vw;
+    animation: move_obstacle 3s infinite;
+}
+.jump-animation{
+    animation: jump 1s infinite;
+}
+
+#character{
+   bottom:0vh;
+   left: 20vw;
+   position:absolute;
+}
+/* .jump-animation{
+    animation: 2s jump infinite;
+} */
+@keyframes jump{
+    0%{
+        bottom: 0vh;
+    }
+    25%{
+        bottom:15vh;
+        left:22vw;
+    }
+    50%{
+        bottom:20vh;
+        left:26vw;
+    }
+    70%{
+        bottom:15vh;
+        left:22vw;
+    }
+    100%{
+        bottom:8vh;
+        left:20vw;
+    }
+}
+
+@keyframes move_obstacle{
+    0%{
+    left:80vw;
+    }
+    100%{
+     left:-20vw;
+    }
+}
